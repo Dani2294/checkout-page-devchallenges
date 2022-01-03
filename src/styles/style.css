@@ -1,0 +1,51 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base /* series of resets (ex: margin, padding, font-size, ectc...) */ {
+	/* Here you'll insert base styles (ex: :root, body, variables, h1 etc...) */
+	:root {
+		--font-base: 'Montserrat', sans-serif;
+
+		--color-gray1: #4e5150;
+		--color-gray2: #333;
+		--color-gray3: #828282;
+		--color-gray4: #4f4f4f;
+		--color-gray5: #e0e0e0;
+		--color-gray6: #f2f2f2;
+		--color-accent: #f2994a;
+	}
+
+	hr {
+		background-color: #bdbdbd;
+	}
+}
+
+@layer components /* styles for components class (ex: container ) */ {
+	/* Here you'll insert components styles (ex: buttons, cards, etc...) */
+	.custom-input {
+		@apply rounded-xl border border-gray3 w-full pl-12 pr-2 py-3 text-gray2 placeholder:text-gray3 clamp-3 focus:outline-accent;
+	}
+	.icon {
+		@apply text-gray3 absolute top-1/2 transform -translate-y-1/2 left-3;
+	}
+}
+
+@layer utilities /* series of utilities class (ex: pt, mt, shadow, grid-cols-2, etc...) */ {
+	/* Here you'll insert custom utilities classes (ex: .filter-none { filter: none; ) */
+	.clamp-1 {
+		font-size: clamp(1.5rem, 2vw + 1rem, 2.25rem);
+	}
+	.clamp-2 {
+		font-size: clamp(0.875rem, 3vw, 1.125rem);
+	}
+	.clamp-3 {
+		font-size: clamp(0.75rem, 3vw, 1rem);
+	}
+	.clamp-4 {
+		font-size: clamp(0.625rem, 2vw, 0.75rem);
+	}
+}

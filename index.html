@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+		/>
+
+		<link rel="icon" href="./src/assets/devchallenges.png" />
+
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			href="https://devchallenges.io/"
+		/>
+
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./src/styles/style.css" />
+
+		<title>Devchallenges | Checkout Page</title>
+	</head>
+	<body class="font-base">
+		<div class="max-w-screen-lg mx-auto px-3 py-8 md:py-16">
+			<header class="mb-5 md:mb-12">
+				<h1 class="text-gray1 clamp-1">Checkout</h1>
+			</header>
+			<main
+				class="
+					space-y-10
+					md:space-y-0 md:flex
+					flex-row-reverse
+					justify-between
+					items-start
+					md:gap-5
+				"
+			>
+				<aside class="flex flex-col bg-gray6 p-5 rounded-xl md:w-[40%]">
+					<div class="item flex space-x-5 mb-8">
+						<img
+							src="./src/assets/photo1.png"
+							alt="A vintage backbag"
+							class="item_img rounded-xl w-[50%] md:w-[35%] object-cover"
+						/>
+						<div class="item_info flex flex-col w-full">
+							<p class="item__name text-gray1 clamp-3 mb-2">Vintage Backbag</p>
+							<div class="flex items-center space-x-3">
+								<p id="item1-price" class="item__price text-accent clamp-2">
+									$54.99
+								</p>
+								<span class="item__old-price text-gray1 line-through clamp-4"
+									>$94.99</span
+								>
+							</div>
+							<div
+								class="
+									item_counter
+									mt-auto
+									border border-gray3
+									rounded-xl
+									px-2
+									py-4
+									flex
+									items-center
+									justify-between
+								"
+							>
+								<span
+									id="item1-minus-btn"
+									class="
+										material-icons
+										bg-gray5
+										rounded
+										text-gray3
+										cursor-pointer
+									"
+									>remove</span
+								>
+								<span id="item1" class="text-gray2">0</span>
+								<span
+									id="item1-plus-btn"
+									class="
+										material-icons
+										bg-gray5
+										rounded
+										text-gray3
+										cursor-pointer
+									"
+									>add</span
+								>
+							</div>
+						</div>
+					</div>
+					<div class="item flex space-x-5">
+						<img
+							src="./src/assets/photo2.png"
+							alt="Levi Shoes"
+							class="item_img rounded-xl w-[50%] md:w-[35%] object-cover"
+						/>
+						<div class="item_info flex flex-col w-full">
+							<p class="item__name text-gray1 clamp-3 mb-2">Levi Shoes</p>
+							<div class="flex items-center space-x-3">
+								<p id="item2-price" class="item__price text-accent clamp-2">
+									$74.99
+								</p>
+								<span class="item__old-price text-gray1 line-through clamp-4"
+									>$124.99</span
+								>
+							</div>
+							<div
+								class="
+									item_counter
+									mt-auto
+									border border-gray3
+									rounded-xl
+									px-2
+									py-4
+									flex
+									items-center
+									justify-between
+								"
+							>
+								<span
+									id="item2-minus-btn"
+									class="
+										material-icons
+										bg-gray5
+										rounded
+										text-gray3
+										cursor-pointer
+									"
+									>remove</span
+								>
+								<span id="item2" class="text-gray2">0</span>
+								<span
+									id="item2-plus-btn"
+									class="
+										material-icons
+										bg-gray5
+										rounded
+										text-gray3
+										cursor-pointer
+									"
+									>add</span
+								>
+							</div>
+						</div>
+					</div>
+					<div class="items_summary text-gray2 mt-20">
+						<hr />
+						<div
+							class="
+								items_shipping-price
+								flex
+								items-center
+								justify-between
+								py-2
+							"
+						>
+							<p class="clamp-2">Shipping</p>
+							<span id="shipping-price" class="clamp-2">$19</span>
+						</div>
+						<hr />
+						<div
+							class="items_total-price flex items-center justify-between pt-2"
+						>
+							<p class="clamp-2">Total</p>
+							<span id="total-price" class="clamp-2">$0</span>
+						</div>
+					</div>
+				</aside>
+				<form id="checkout-form" class="checkout-form flex flex-col md:w-[50%]">
+					<fieldset class="group-form mb-11 md:mb-14">
+						<legend class="clamp-2 text-gray2">Contact information</legend>
+						<div class="space-y-2">
+							<div class="form-control">
+								<label for="email" class="text-gray4 clamp-4">Email</label>
+								<div class="icon-input relative">
+									<span class="material-icons icon">email</span>
+									<input
+										type="email"
+										name="email"
+										id="email"
+										required
+										placeholder="Enter your email..."
+										class="custom-input"
+									/>
+								</div>
+							</div>
+							<div class="form-control">
+								<label for="phone" class="text-gray4 clamp-4">Phone</label>
+								<div class="icon-input relative">
+									<span class="material-icons icon">phone</span>
+									<input
+										type="tel"
+										name="phone"
+										id="phone"
+										required
+										placeholder="Enter your phone..."
+										class="custom-input"
+									/>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+					<fieldset class="group-form">
+						<legend class="clamp-2 text-gray2">Shipping address</legend>
+						<div class="space-y-2">
+							<div class="form-control">
+								<label for="name" class="text-gray4 clamp-4">Full name</label>
+								<div class="icon-input relative">
+									<span class="material-icons icon">account_circle</span>
+									<input
+										type="text"
+										name="name"
+										id="name"
+										required
+										placeholder="Enter your name..."
+										class="custom-input"
+									/>
+								</div>
+							</div>
+							<div class="form-control">
+								<label for="address" class="text-gray4 clamp-4">Address</label>
+								<div class="icon-input relative">
+									<span class="material-icons icon">home</span>
+									<input
+										type="text"
+										name="address"
+										id="address"
+										required
+										placeholder="Your address..."
+										class="custom-input"
+									/>
+								</div>
+							</div>
+							<div class="form-control">
+								<label for="city" class="text-gray4 clamp-4">City</label>
+								<div class="icon-input relative">
+									<span class="material-icons icon">location_city</span>
+									<input
+										type="text"
+										name="city"
+										id="city"
+										required
+										placeholder="Your city..."
+										class="custom-input"
+									/>
+								</div>
+							</div>
+							<div class="form-control flex gap-5">
+								<div class="w-full">
+									<label for="country" class="text-gray4 clamp-4"
+										>Country</label
+									>
+									<div class="icon-input relative">
+										<span class="material-icons icon">public</span>
+										<select
+											name="country"
+											id="country"
+											class="custom-input text-gray3"
+											placeholder="Your country..."
+											required
+										>
+											<option value="" selected>Your country...</option>
+											<option value="France" class="form__option">
+												&#127467;&#127479; France
+											</option>
+											<option value="Usa" class="form__option">
+												&#127482;&#127480; Usa
+											</option>
+											<option value="italia" class="form__option">
+												&#127470;&#127481; Italia
+											</option>
+											<option value="Uk" class="form__option">
+												&#127468;&#127463; United Kingdom
+											</option>
+											<option value="japan" class="form__option">
+												&#127470;&#127481; Japan
+											</option>
+											<option value="russia" class="form__option">
+												&#127468;&#127463; Russia
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="w-full">
+									<label for="postal-code" class="text-gray4 clamp-4"
+										>Postal code</label
+									>
+									<div class="icon-input relative">
+										<span class="material-icons icon">markunread_mailbox</span>
+										<input
+											type="text"
+											id="postal-code"
+											name="postal-code"
+											placeholder="Your postal code..."
+											class="custom-input"
+										/>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="form-control flex items-center mt-3 mb-5">
+							<input type="checkbox" name="save-info" id="save-info" />
+							<label for="save-info" class="clamp-4 text-gray4 ml-2">
+								Save this information for next time
+							</label>
+						</div>
+					</fieldset>
+					<button
+						type="submit"
+						class="btn self-end bg-accent text-white rounded-xl py-4 px-11"
+					>
+						Continue
+					</button>
+				</form>
+			</main>
+		</div>
+		<script type="module" src="./src/js/main.js"></script>
+	</body>
+</html>
